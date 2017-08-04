@@ -12,7 +12,7 @@ This repository contains the [OpenAPI](https://github.com/OAI/OpenAPI-Specificat
 
 The specification can be rendered as HTML documentation:
 
-* [API Reference Documentation](https://rawgit.com/SURFsharekit/specification/blob/master/docs.html)
+* [API Reference Documentation](https://rawgit.com/SURFsharekit/specification/master/docs.html)
 
 
 ## Contributing
