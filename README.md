@@ -1,12 +1,11 @@
 # SURFsharekit API Specification
 
-![SURFsharekit API](surfsharekit-logo.png)
+![SURFsharekit API](surfsharekitlogo.png)
 
 This repository contains the [OpenAPI](https://github.com/OAI/OpenAPI-Specification) (fka Swagger) specification for the [SURFsharekit API](https://surfsharekit.nl/home).
 
 * [Documentation](#documentation)
 * [Contributing](#contributing)
-* [Community](#community)
 
 
 ## Documentation
