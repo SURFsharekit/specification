@@ -31,3 +31,5 @@ tags:
   - name: persons
     description: The persons API provides information about persons related to an educational institute.
 paths:
+  /persons:
+$ref: paths/PersonCollection.yaml
