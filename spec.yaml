@@ -19,9 +19,9 @@ info:
     }
     ```
   x-logo:
-    url: logo.png
+    url: surfsharekitlogo.png
 host: api.surfsharekit.nl
-basePath: /v2
+basePath:
 schemes:
   - https
 produces:
@@ -30,28 +30,4 @@ produces:
 tags:
   - name: persons
     description: The persons API provides information about persons related to an educational institute.
-  - name: faculties
-    description: The organizational parts of an organization.
-  - name: educational departments
-    description: The educational departments of an organization.
-  - name: educational plans
-    description: The educational plans API provides information about the plans in which the study is organized
-  - name: course groups
-    description: The course groups API provides informations about the groups which organizes the courses
-  - name: courses
-    description: The courses API provides information about the course. Updated on ad hoc-base.
-  - name: course results
-    description: The course result API provides the (list of) test results from a specific course attended by a student.
-  - name: test results
-    description: The test result API provides information about the results from the tests from different courses done by the student.
-  - name: buildings
-    description: The building API provides general information about buildings in use by the organization.
-  - name: rooms
-    description: The rooms API provides general information about rooms and specific information about the workplaces available. Updated continuously.
-  - name: schedules
-    description: The schedules API provides information about the planning of the courses in lessons. Updated on ad hoc-base.
-  - name: news feeds
-    description: The news feeds API returns news feeds aggregating one or more news items. Updated on ad hoc-base.
-  - name: news items
-    description: The news items API returns news items, used in the news feeds. Updated on ad hoc-base.
 paths:
