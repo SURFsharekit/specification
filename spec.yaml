@@ -1,9 +1,9 @@
 swagger: '2.0'
 info:
-  version: 2.0.0
-  title: SURFsharekit API
+  version: 0.0.1
+  title: SURFsharekit publication API
   description: |
-    OpenAPI (fka Swagger) specification for the SURFsharekit API.
+    OpenAPI (fka Swagger) specification for the SURFsharekit publication API.
     # Hypermedia API
     The SURFsharekit API is designed as a *hypermedia API*. In short, this means all responses will contain hypermedia links
     to simplify the navigation between the different API calls. Each link (except `self`) is optional. When a specific link is
@@ -30,8 +30,234 @@ produces:
 tags:
   - name: persons
     description: The persons API provides information about persons related to an educational institute.
+#paths:
+#  /persons:
+#    $ref: paths/PersonCollection.yaml
+#  /persons/{personId}:
+#    $ref: paths/PersonInstance.yaml
 paths:
-  /persons:
-    $ref: paths/PersonCollection.yaml
-  /persons/{personId}:
-    $ref: paths/PersonInstance.yaml
+  /Organization:
+    get:
+      responses:
+        '200':
+          description: A slice of Organization objects.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a list of Organization objects.
+    post:
+      responses:
+        '201':
+          description: A new Organization object is created. Id is in the headers.
+        default:
+          description: An error occured. See response for details.
+      summary: Creates a new Organization object.
+    summary: Lists Organization objects and creates new ones.
+  /Organization/{uuid}:
+    delete:
+      responses:
+        '200':
+          description: The Organization object is permanently deleted.
+        default:
+          description: An error occured. See response for details.
+      summary: Permanently removes a given Organization object.
+    get:
+      responses:
+        '200':
+          description: The requested Organization object.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a specific Organization object identified by UUID.
+    parameters:
+    - description: The identifier of the object, as UUID.
+      example: 010efc31-4c1d-41f7-955f-75051ed38eca
+      in: path
+      name: uuid
+      required: true
+    put:
+      responses:
+        '200':
+          description: The Organization object is updated.
+        default:
+          description: An error occured. See response for details.
+      summary: Updates properties of a given Organization object.
+    summary: Retrieves and changes Organization objects.
+  /Person:
+    get:
+      responses:
+        '200':
+          description: A slice of Person objects.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a list of Person objects.
+    post:
+      responses:
+        '201':
+          description: A new Person object is created. Id is in the headers.
+        default:
+          description: An error occured. See response for details.
+      summary: Creates a new Person object.
+    summary: Lists Person objects and creates new ones.
+  /Person/{uuid}:
+    delete:
+      responses:
+        '200':
+          description: The Person object is permanently deleted.
+        default:
+          description: An error occured. See response for details.
+      summary: Permanently removes a given Person object.
+    get:
+      responses:
+        '200':
+          description: The requested Person object.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a specific Person object identified by UUID.
+    parameters:
+    - description: The identifier of the object, as UUID.
+      example: 010efc31-4c1d-41f7-955f-75051ed38eca
+      in: path
+      name: uuid
+      required: true
+    put:
+      responses:
+        '200':
+          description: The Person object is updated.
+        default:
+          description: An error occured. See response for details.
+      summary: Updates properties of a given Person object.
+    summary: Retrieves and changes Person objects.
+  /PublicationRecord:
+    get:
+      responses:
+        '200':
+          description: A slice of PublicationRecord objects.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a list of PublicationRecord objects.
+    post:
+      responses:
+        '201':
+          description: A new PublicationRecord object is created. Id is in the headers.
+        default:
+          description: An error occured. See response for details.
+      summary: Creates a new PublicationRecord object.
+    summary: Lists PublicationRecord objects and creates new ones.
+  /PublicationRecord/{uuid}:
+    delete:
+      responses:
+        '200':
+          description: The PublicationRecord object is permanently deleted.
+        default:
+          description: An error occured. See response for details.
+      summary: Permanently removes a given PublicationRecord object.
+    get:
+      responses:
+        '200':
+          description: The requested PublicationRecord object.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a specific PublicationRecord object identified by UUID.
+    parameters:
+    - description: The identifier of the object, as UUID.
+      example: 010efc31-4c1d-41f7-955f-75051ed38eca
+      in: path
+      name: uuid
+      required: true
+    put:
+      responses:
+        '200':
+          description: The PublicationRecord object is updated.
+        default:
+          description: An error occured. See response for details.
+      summary: Updates properties of a given PublicationRecord object.
+    summary: Retrieves and changes PublicationRecord objects.
+  /Resource:
+    get:
+      responses:
+        '200':
+          description: A slice of Resource objects.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a list of Resource objects.
+    post:
+      responses:
+        '201':
+          description: A new Resource object is created. Id is in the headers.
+        default:
+          description: An error occured. See response for details.
+      summary: Creates a new Resource object.
+    summary: Lists Resource objects and creates new ones.
+  /Resource/{uuid}:
+    delete:
+      responses:
+        '200':
+          description: The Resource object is permanently deleted.
+        default:
+          description: An error occured. See response for details.
+      summary: Permanently removes a given Resource object.
+    get:
+      responses:
+        '200':
+          description: The requested Resource object.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a specific Resource object identified by UUID.
+    parameters:
+    - description: The identifier of the object, as UUID.
+      example: 010efc31-4c1d-41f7-955f-75051ed38eca
+      in: path
+      name: uuid
+      required: true
+    put:
+      responses:
+        '200':
+          description: The Resource object is updated.
+        default:
+          description: An error occured. See response for details.
+      summary: Updates properties of a given Resource object.
+    summary: Retrieves and changes Resource objects.
+  /Type:
+    get:
+      responses:
+        '200':
+          description: A slice of Type objects.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a list of Type objects.
+    post:
+      responses:
+        '201':
+          description: A new Type object is created. Id is in the headers.
+        default:
+          description: An error occured. See response for details.
+      summary: Creates a new Type object.
+    summary: Lists Type objects and creates new ones.
+  /Type/{uuid}:
+    delete:
+      responses:
+        '200':
+          description: The Type object is permanently deleted.
+        default:
+          description: An error occured. See response for details.
+      summary: Permanently removes a given Type object.
+    get:
+      responses:
+        '200':
+          description: The requested Type object.
+        default:
+          description: An error occured. See response for details.
+      summary: Returns a specific Type object identified by UUID.
+    parameters:
+    - description: The identifier of the object, as UUID.
+      example: 010efc31-4c1d-41f7-955f-75051ed38eca
+      in: path
+      name: uuid
+      required: true
+    put:
+      responses:
+        '200':
+          description: The Type object is updated.
+        default:
+          description: An error occured. See response for details.
+      summary: Updates properties of a given Type object.
+    summary: Retrieves and changes Type objects.
